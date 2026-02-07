@@ -12,58 +12,57 @@
         body {
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             text-align: center;
-            line-height: 2.5;
+            line-height: 1.5;
             margin: 0;
             padding: 0;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url('images/background.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            z-index: -1;
         }
 
         .logo-image {
             width: 200px;
             height: auto;
-            margin-top: 6em;
             margin-left: auto;
             margin-right: auto;
             display: block;
         }
 
         .description {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1em;
+            border-radius: 1em;
             max-width: 20em;
             margin-left: auto;
             margin-right: auto;
             text-align: left;
-            text-shadow: 
-                -2px -2px 0 #FEC993,  
-                2px -2px 0 #FEC993,
-                -2px 2px 0 #FEC993,
-                2px 2px 0 #FEC993,
-                -2px 0 0 #FEC993,
-                2px 0 0 #FEC993,
-                0 -2px 0 #FEC993,
-                0 2px 0 #FEC993,
-                0 0 5px rgba(254, 201, 147, 0.8);
         }
         
         .description a {
             color: #0066cc;
-            text-shadow: 
-                -2px -2px 0 #FEC993,  
-                2px -2px 0 #FEC993,
-                -2px 2px 0 #FEC993,
-                2px 2px 0 #FEC993,
-                -2px 0 0 #FEC993,
-                2px 0 0 #FEC993,
-                0 -2px 0 #FEC993,
-                0 2px 0 #FEC993,
-                0 0 5px rgba(254, 201, 147, 0.8);
         }
 
         .container {
             padding: 2em;
+        }
+
+        @media (max-width: 768px) {
+            body::before {
+                background-position: right center;
+            }
         }
     </style>
 </head>
@@ -74,10 +73,10 @@
         <img class="logo-image" src="images/logo.svg" alt="Little Software LLC Logo">
     
         <p class="description">
-            A business made with family in mind. <br>A team of four:
-            <br>Mom 🦢 María, dad 🧑🏽‍💻 Arián, brother 🎮 Hugo and bebé 🐣 Daniel.
-            <br>Based in Naples, Florida.
-            <br>Our project, <a href="https://matandile.games" target="_blank">Matandile.Games</a>, creates fun, educational digital experiences.
+            A business made with family in mind. <br>A team of four: <b>
+            Mom 🦢 María, dad 🧑🏽‍💻 Arián, brother 🎮 Hugo and bebé 🐣 Daniel.</b>
+            Based in Naples, Florida.
+            Our project, <a href="https://matandile.games" target="_blank">Matandile.Games</a>, <b>creates fun, educational digital experiences.</b>
             <br>Reach out at <a href="mailto:hello@littlesoftware.info">hello@littlesoftware.info</a>.
         </p>
     </div>
